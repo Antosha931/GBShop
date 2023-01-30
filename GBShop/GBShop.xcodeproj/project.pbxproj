@@ -15,6 +15,8 @@
 		2A1B74A0296B6BD100B1EEE9 /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B749F296B6BD100B1EEE9 /* GBShopTests.swift */; };
 		2A1B74AA296B6BD100B1EEE9 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B74A9296B6BD100B1EEE9 /* GBShopUITests.swift */; };
 		2A1B74AC296B6BD100B1EEE9 /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B74AB296B6BD100B1EEE9 /* GBShopUITestsLaunchTests.swift */; };
+		2A9527402987D7470095C6D6 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A95273F2987D7470095C6D6 /* AbstractErrorParser.swift */; };
+		2A9527422987D9170095C6D6 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9527412987D9170095C6D6 /* DataRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2A1B74A5296B6BD100B1EEE9 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1B74A9296B6BD100B1EEE9 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		2A1B74AB296B6BD100B1EEE9 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A95273F2987D7470095C6D6 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
+		2A9527412987D9170095C6D6 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 		2A1B74BD296C8CF400B1EEE9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2A95273E2987D7110095C6D6 /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -186,6 +191,15 @@
 				2A1B7496296B6BD100B1EEE9 /* Info.plist */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		2A95273E2987D7110095C6D6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2A95273F2987D7470095C6D6 /* AbstractErrorParser.swift */,
+				2A9527412987D9170095C6D6 /* DataRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +290,9 @@
 				Base,
 			);
 			mainGroup = 2A1B747C296B6BCE00B1EEE9;
+			packageReferences = (
+				2A9527452987EB8E0095C6D6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2A1B7486296B6BCE00B1EEE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -319,8 +336,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1B748D296B6BCE00B1EEE9 /* ViewController.swift in Sources */,
+				2A9527422987D9170095C6D6 /* DataRequest.swift in Sources */,
 				2A1B7489296B6BCE00B1EEE9 /* AppDelegate.swift in Sources */,
 				2A1B748B296B6BCE00B1EEE9 /* SceneDelegate.swift in Sources */,
+				2A9527402987D7470095C6D6 /* AbstractErrorParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +510,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7XJC493SX7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBShop/Info.plist;
+				INFOPLIST_FILE = GBShop/Environments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -521,7 +540,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7XJC493SX7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBShop/Info.plist;
+				INFOPLIST_FILE = GBShop/Environments/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -658,6 +677,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A9527452987EB8E0095C6D6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 2A1B747D296B6BCE00B1EEE9 /* Project object */;
 }
