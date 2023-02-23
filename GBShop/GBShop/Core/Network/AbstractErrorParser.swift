@@ -10,7 +10,7 @@ import Foundation
 
 protocol AbstractErrorParser {
     func parse(_ result: Error) -> Error
-    func parse(response: HTTPURLResponse?, data: Data?, error: Error?) -> Error?
+    func parse(response: URLResponse?, data: Data?, error: Error?) -> Error?
 }
 
 final class ErrorParser: AbstractErrorParser {
@@ -18,7 +18,7 @@ final class ErrorParser: AbstractErrorParser {
         return result
     }
 
-    func parse(response: HTTPURLResponse?, data: Data?, error: Error?) -> Error? {
+    func parse(response: URLResponse?, data: Data?, error: Error?) -> Error? {
         return error
     }
 }
